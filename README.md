@@ -1,10 +1,10 @@
-# Arch linux hyprland dot files
+Arch linux hyprland dot files
 =======
 
 Mainly uploading if I need to wipe my computer again :) or if I get a laptop or something.
 and maybe I'll learn how to make a really cool dot file and people will use it :))
 
-# Kib Files
+Kib Files
 =======
 
 First dot files for wayland hyprland I'm using smooth animations for rofi and waybar nothing else so far :(
