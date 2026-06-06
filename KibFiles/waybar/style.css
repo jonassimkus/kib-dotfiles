@@ -1,0 +1,191 @@
+
+* {
+  font-family: "Adwaita Sans", "Hack Nerd Font Mono";
+  font-size: 18px;
+  color: #fff;
+  padding: 0;
+  min-height: 0;
+}
+
+#custom-logo{
+    background-image: url('linux.png');
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* or specify a size like 20px */
+
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 8px; 
+    font-size: 11px; /* Adjust font size to control the module's height */
+}
+
+.modules-right{
+  background: rgba(20, 21, 33, 0.8);
+  border-radius: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.modules-left{
+
+}
+
+
+.modules-center{
+  background: rgba(20, 21, 33, 0.8);
+  border-radius: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+
+window#waybar {
+  background-color: rgba(44, 54, 60, 0);
+  padding: 0;
+}
+
+#workspaces {
+}
+
+#playing{
+  color: white;
+}
+
+#cpu{
+  padding: 6px;
+}
+
+#tray {
+  margin-left: 4px;
+  margin-right: 4px;
+
+  transition-property: margin;
+  transition-duration: .25s;
+}
+
+
+#tray * {
+  margin-left: 4px;
+  margin-right: 4px;
+
+}
+#tray menu{
+  background-color: rgba(20, 21, 33, 0.8);
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 8px;
+}
+
+
+#tray menu *{
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 20px;
+
+  transition-property: margin, background-color;
+  transition-duration: 0.25s;
+}
+
+#tray menu *:hover{
+  background-color: rgba(20, 21, 33, 0);
+  margin-left: 8px;
+}
+
+#mpris:hover{
+  margin-left: 24px;
+  margin-right: 8px;
+}
+
+#mpris{
+  font-style: italic;
+  margin-left: 16px;
+  font-weight: bold;
+
+  transition-property: margin;
+  transition-duration: .25s;
+}
+
+#clock {
+  background: rgba(20, 21, 33, 0.8);
+  border-radius: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+#workspaces button.active {
+  font-weight: bold;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-color: white;
+  border-style: solid;
+}
+
+#workspaces button:hover{
+  background: none;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-color: white;
+  border-style: solid;
+  box-shadow: none;
+}
+
+#workspaces button{
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 2px;
+  border-radius: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  transition-property: margin;
+  transition-duration: .25s;
+}
+
+#cpu,
+#playing,
+#memory,
+#network,
+#pulseaudio{
+  margin-top: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+
+  transition-property: margin;
+  transition-duration: .25s;
+}
+
+#clock,
+#custom-logo{
+  transition-property: padding, margin;
+  transition-duration: .25s;
+}
+
+#clock:hover{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#custom-logo:hover{
+  padding-left: 16px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+#cpu:hover,
+#playing:hover,
+#network:hover,
+#memory:hover,
+#pulseaudio:hover{
+  margin-left: 8px;
+  margin-right: 8px;
+}

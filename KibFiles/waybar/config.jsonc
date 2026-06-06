@@ -1,0 +1,83 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 16,
+    "margin-bottom": 0,
+    "margin-left": 16,
+    "margin-right": 16,
+
+    "modules-left": [
+        "clock",
+        "mpris"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "tray",
+        "memory",
+        "cpu",
+        "network",
+        "pulseaudio",
+        "custom/logo",
+	],
+    
+    "network": {
+        "format": "{essid} {bandwidthTotalBytes} <span font='16' rise='-1200'>󰤨</span>",
+        "interval": 1,
+        "tooltip": false,
+    },
+
+    "custom/logo": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "pkill rofi || rofi -show drun"
+    },
+
+    "memory":{
+        "format":"{used}gb <span font='16' rise='-1200'></span>",
+        "tooltip": false,
+        "interval": 1
+    },
+
+    "cpu":{
+        "format":"{usage}% <span font='16' rise='-1200'></span>",
+        "tooltip": false,
+        "interval": 1
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip": false,
+    },
+    "pulseaudio": {
+        "format": "{volume}% <span font='16' rise='-1200'></span>",
+        "tooltip": false,
+    },
+    "mpris": {
+        "format": "<span font='16' rise='-1200'></span> {title} - {artist}",
+        "tooltip-format" : "{album}",
+        "format-paused": "<span font='16' rise='-1200'></span> {title} - {artist}",
+        "on-click": "playerctl play-pause",
+        "tooltip": false,
+        "max-length": 70
+    },
+
+    "tray":{
+        "tooltip": false,
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+          "1": "<span font='20' rise='-1200'>󰈹</span>",
+          "2": "<span font='24' rise='-1200'></span>",
+          "3": "<span font='20' rise='-1200'></span>",
+          "4": "4",
+          "5": "5",
+        },
+        "persistent-workspaces": {
+          "*": [ 1, 2, 3, 4, 5]
+        }
+    },
+}

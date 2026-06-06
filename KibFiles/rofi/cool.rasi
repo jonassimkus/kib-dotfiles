@@ -1,0 +1,133 @@
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{icon}  {name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+    kb-cancel: "Escape,Control+g";
+    kb-accept-entry: "Return,KP_Enter";
+}
+
+* {
+    bg:             rgb(17, 17, 25, 0.8);
+    bg-alt:             rgb(17, 17, 25,0);
+    fg:             #eaeaeaff;
+    fg-muted:             #eaeaeaff;
+    accent:         rgb(3, 3, 4, 0.8);
+    urgent:         #f38ba8ff;
+    selected-fg:             #eaeaeaff;
+    border:         rgb(3, 3, 4);
+
+    font: "Adwaita Sans 18";
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    location: south;
+    anchor: center;
+    fullscreen: false;
+    width: 720px;
+    border: 0;
+    border-color: @border;
+    border-radius: 8px 8px 0px 0px;
+    background-color: @bg;
+    padding: 18px;
+}
+
+mainbox {
+    children: [ "inputbar", "message", "listview" ];
+    spacing: 14px;
+    background-color: transparent;
+}
+
+message {
+    enabled: false;
+}
+
+inputbar {
+    children: [ "entry" ];
+    spacing: 10px;
+    background-color: @bg-alt;
+    border: 0px;
+
+    border-radius: 16px;
+
+    padding: 12px;
+}
+
+entry {
+    padding: 0px 0 0 5px;
+    placeholder: " Search";
+    placeholder-color: @fg-muted;
+    background-color: transparent;
+    text-color: @fg;
+    border-radius: 16px;
+    expand: true;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    border-radius: 16px;
+    dynamic: true;
+    cycle: true;
+    scrollbar: false;
+    layout: vertical;
+    spacing: 8px;
+    background-color: transparent;
+}
+
+element {
+    orientation: horizontal;
+    children: [ "element-icon", "element-text" ];
+    spacing: 12px;
+    background-color: @bg-alt;
+    border:0px;
+    border-color: transparent;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+element normal.normal {
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+element selected.normal {
+    text-color: @selected-fg;
+    background-color: @accent;
+
+}
+
+element normal.urgent {
+    background-color: @bg-alt;
+    text-color: @urgent;
+    border-color: @urgent;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @selected-fg;
+    border-color: @urgent;
+}
+
+element-icon {
+    size: 28px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
